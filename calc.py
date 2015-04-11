@@ -1,3 +1,5 @@
+import math
+
 # to add two numbers
 def add(a, b):
 	return a + b
@@ -14,8 +16,16 @@ def multiply(a, b):
 def divide(a, b):
 	return a / b
 
+# get sine of an angle
+def sine(a):
+	return math.sin(a)
+
+# get cosine of an angle
+def cosine(a):
+	return math.cos(a)
+
 while(1):
-	c = int(input('Enter your choice\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5.Exit\n\nYour choice: '))
+	c = int(input('Enter your choice\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Sine\n6.Cosine\n7.Exit\n\nYour choice: '))
 	a = float(input('Enter first operand'))
 	b = float(input('Enter second operand'))
 
@@ -28,5 +38,10 @@ while(1):
 	elif(c == 4):
 		print ("%f / %f = %f\n" % (a, b, divide(a, b)))
 	elif(c == 5):
+		print ("sin(%f) = %f\n" % (a, sine(a)))
+	elif(c == 6):
+		print ("cosine(%f) = %f\n", % (a, cosine(a)))
+	elif(c == 7):
 		break
+	
 
